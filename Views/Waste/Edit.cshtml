@@ -1,0 +1,25 @@
+@model WasteEntry
+
+@{
+    ViewData["Title"] = "Edit Waste Entry";
+}
+
+<h2>✏️ Edit Waste Entry</h2>
+
+<div class="card shadow-sm">
+    <div class="card-body p-4">
+
+        <form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+
+            <input type="hidden" asp-for="Id" />
+
+            <partial name="_Form" model="Model" />
+
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

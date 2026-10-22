@@ -1,0 +1,27 @@
+@model WasteEntry
+
+@{
+    ViewData["Title"] = "New Waste Analysis";
+}
+
+<h2>➕ New Waste Analysis</h2>
+
+<p class="text-muted">
+    Enter actual quantity and your own estimated recovery rate.
+</p>
+
+<div class="card shadow-sm">
+    <div class="card-body p-4">
+
+        <form asp-action="Create" method="post">
+
+            <partial name="_Form" model="Model" />
+
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
